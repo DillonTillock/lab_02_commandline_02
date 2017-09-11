@@ -19,7 +19,8 @@ $ echo hello
 Copy and paste the output below.
 ----------
 
-
+ent-v314-003:/ student$ echo hello
+hello
 
 ==========
 2. Type:
@@ -28,6 +29,8 @@ $ echo hello there
 
 Copy and paste the output below.
 ----------
+ent-v314-003:/ student$ echo hello there
+hello there
 
 
 
@@ -38,6 +41,8 @@ $ echo good mornin'
 
 Copy and paste the output below.
 ----------
+ent-v314-003:/ student$ echo good mornin'
+> 
 
 
 
@@ -57,6 +62,8 @@ $ echo "good mornin'"
 Copy and paste the output below.
 ----------
 
+ent-v314-003:/ student$ echo "good mornin'"
+good mornin'
 
 
 ==========
@@ -67,7 +74,7 @@ $ echo *
 What happens?
 ----------
 
-
+It is unable to echo that action, therefore the request failed.
 
 ==========
 7. Ok... that's a lot of output.  How do we clean up our screen so that it's empty again?
@@ -75,7 +82,7 @@ What happens?
 Write the command that you used below:
 ----------
 
-
+clear
 
 ==========
 We're going to practice downloading files from a web site.  We'll use this practice to download more lab materials!
@@ -87,6 +94,13 @@ $ curl google.com
 
 Copy and paste the output below.
 ----------
+ent-v314-003:/ student$ curl google.com
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
 
 
 
@@ -97,7 +111,10 @@ $ curl www.google.com
 
 Copy and paste the output below, but not the whole thing!  Just copy up to the part that has the title tags (<title>......</title>).
 ----------
-
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
+ent-v314-003:/ student$ curl www.google.com
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title>
 
 
 ==========
@@ -105,8 +122,14 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 
 Write the command you used below.  Also copy and paste the output below.
 ----------
+curl -o
 
-
+ent-v314-003:/ student$ curl -o google.html www.google.com
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0Warning: Failed to create the file google.html: Permission denied
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (23) Failed writing body (0 != 11232)
 
 ==========
 11. Now let's download the lab file for this homework.  First, figure out what directory you're in.
@@ -114,6 +137,9 @@ Write the command you used below.  Also copy and paste the output below.
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
 
+pwd
+ent-v314-003:/ student$ pwd
+/
 
 
 ==========
@@ -121,6 +147,7 @@ Write the command you used to determine your directory.  Also, copy and paste th
 
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
+cd  ~
 
 
 
